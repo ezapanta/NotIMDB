@@ -1,0 +1,72 @@
+<p id="notice"><%= notice %></p>
+
+<body>
+  <div class="container">
+      
+	  <%= form_tag(movies_path, :method => "get") do %>
+	<div id="container">
+		<h1>All Movies</h1>
+		<div class="navbar-form" style="text-align:center">
+				<%= text_field_tag :search, params[:search], placeholder: "Search", class: "form-control", :search => params[:search] %>
+				<%= submit_tag "Search", class: 'btn btn-default' %>
+				<%= link_to "Clear", :type => "reset" %>
+		</div>
+		
+		<div class="row">
+			<div class="col-sm-6">
+				<div>
+					<div>
+						<div class="well row">
+						<div class="dropdown col-sm-6">
+						 Genre: <br> 
+						 <%= select_tag(:filter_genre, options_for_select([['All', 'All'],['Action', 'Action'], ['Adventure', 'Adventure'],['Animation', 'Animation'],
+						 ['Comedy', 'Comedy'],['Drama', 'Drama'],['Romance', 'Romance'],['Sci-Fi', 'Sci-Fi']], 
+						 :selected => params[:filter_genre]), :onchange => "this.form.submit();")%>
+						</div>
+						<div class="dropdown col-sm-6">
+						 Rating: <br>
+						  <%= select_tag(:filter_rating, options_for_select([['', ],['1', 1], ['2', 2],['3', 3],['4', 4],['5', 5]], :selected => params[:filter_rating]), 
+						  :onchange => "this.form.submit();") %>
+						  <br><br>
+						</div>
+						</div>	  
+					</div>
+				</div>
+			</div>
+	
+			<div class="col-sm-6">
+				<div>
+					<div>
+						<div class="well row">
+						<div class="dropdown col-sm-6">
+							Sort By: <br>
+						<%= select_tag(:sort, options_for_select([['Featured', ''],['Title A-Z', 'titleAsc'], ['Title Z-A', 'titleDesc'],['Rating High-Low', 'rateDesc'], 
+						['Rating Low-High', 'rateAsc']], :selected => params[:sort]), :onchange => "this.form.submit();")%>
+						<br><br>
+						</div>					
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<% end %>
+		
+  <div class= "row">
+    <% @movies.each do |movie| %>
+    <%if movie.viewable?%>
+		<%= link_to movie_path(movie.id), class:"movieCard col-md-4" do %>
+			<% movie.title %>
+				<h3><%= movie.title %></h3>
+				 <span style="float: left;"><b>Genre:</b> <%= movie.genre %></span>
+				 <span style="float: right;"><b>Rating:</b> <%= movie.rating %></span>
+		  <% end %>
+		  <%end%>
+    <% end %>
+	</div>
+
+
+</body>
+
+<br>
+
+<%= link_to 'New Movie', new_movie_path %>

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: 
+  genre: 
+  director: 
+  actor1: 
+  actor2: 
+  actor3: 
+  releaseyr: 
+  rating: 
+  description: MyText
+
+two:
+  title: 
+  genre: 
+  director: 
+  actor1: 
+  actor2: 
+  actor3: 
+  releaseyr: 
+  rating: 
+  description: MyText

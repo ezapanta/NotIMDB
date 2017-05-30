@@ -1,0 +1,32 @@
+<% provide(:title, 'Sign up') %>
+<h1>Welcome to Not IMDB!</h1>
+   <p>Although Not IMDB does not require an account to use, you may not have access to all features like commenting, requesting movies, and finding movies online. Fill out the information below to get started</p>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@user) do |f| %>
+            <%= render 'shared/error_messages' %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :email %>
+      <%= f.email_field :email, class: 'form-control' %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form-control' %>
+
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+      <%= f.label :password_hint, "Password Hint" %>
+      <%= f.text_field :password_hint, class: 'form-control' %>
+      
+	  <div class="actions">
+      <%= f.submit "Submit", class: "btn btn-primary" %>
+	  </div>
+	<% end %>
+    
+    <h4>Already a member? <%= link_to "Login here", login_path %></h4>
+  </div>
+</div>
