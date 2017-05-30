@@ -1,0 +1,9 @@
+Welcome to Not IMDB!
+
+Overview:
+The home page is where you see all the movies in the database. You can filter the movies by rating or genre or sort them by rating or alphebetically.
+
+By clicking on a movie picture or title, you can see the individual movie page that displays all of that movie's information, trailer, and see purchasing options. 
+
+You can request to add a movie to the database by clicking the "Request Movie Addition" button in the navigation bar. This brings you to a page where you can enter all of the information about a movie and send it to our administrators for approval.
+

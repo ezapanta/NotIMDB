@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Movie Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/site.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+	<nav class="navbar navbar-default">
+	<div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Not IMDB</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="request.html">Request Movie Addition</a></li>
+
+      </ul>
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="sign-up.html">Sign up</a></li>
+          </ul>
+        </li>
+      </ul>
+		</div><!-- /.navbar-collapse -->
+	</div><!-- /.container-fluid -->
+	</nav>
+
+	<div id="container">
+		<h1>Featured Movies</h1>
+
+		<div class="row">
+			<div class="col-sm-6">
+				<button class="btn btn-primary sort-filter-btn" type="button" data-toggle="collapse" data-target="#collapseFilter" aria-expanded="false" aria-controls="collapseExample">
+				  Filter by...
+				</button>
+				<div class="collapse" id="collapseFilter">
+					<div class="well row">
+					<div class="dropdown col-sm-6">
+					  <button class="btn btn-default dropdown-toggle" type="button" id="filterGenre" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						Genre
+						<span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" aria-labelledby="filterGenre">
+						<li><a href="#">Action</a></li>
+						<li><a href="#">Adventure</a></li>
+						<li><a href="#">Animated</a></li>
+						<li><a href="#">Comedy</a></li>
+						<li><a href="#">Drama</a></li>
+						<li><a href="#">Romance</a></li>
+						<li><a href="#">Sci-Fi</a></li>
+					  </ul>
+					</div>
+					<div class="dropdown col-sm-6">
+					  <button class="btn btn-default dropdown-toggle" type="button" id="filterRating" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						Rating
+						<span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" aria-labelledby="filterRating">
+						<li><a href="#">1/5</a></li>
+						<li><a href="#">2/5</a></li>
+						<li><a href="#">3/5</a></li>
+						<li><a href="#">4/5</a></li>
+						<li><a href="#">5/5</a></li>
+					  </ul>
+					</div>
+				  </div>
+				</div>
+			</div>
+
+			<div class="col-sm-6">
+				<button class="btn btn-primary sort-filter-btn" type="button" data-toggle="collapse" data-target="#collapseSort" aria-expanded="false" aria-controls="collapseExample">
+				  Sort by...
+				</button>
+				<div class="collapse" id="collapseSort">
+					<div class="well row">
+					<div class="dropdown col-sm-6">
+					  <button class="btn btn-default dropdown-toggle" type="button" id="sortAlphabetical" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						Alphabetical
+						<span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" aria-labelledby="sortAlphabetical">
+						<li><a href="#">A to Z</a></li>
+						<li><a href="#">Z to A</a></li>
+					  </ul>
+					</div>
+					<div class="dropdown col-sm-6">
+					  <button class="btn btn-default dropdown-toggle" type="button" id="sortRating" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						Rating
+						<span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" aria-labelledby="sortRating">
+						<li><a href="#">High to Low</a></li>
+						<li><a href="#">Low to High</a></li>
+					  </ul>
+					</div>
+				  </div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+		<div class="row">
+			<a href="single-movie.html" class="movieCard col-md-4">
+				<h3>Inside Out</h3>
+				<img src="http://ia.media-imdb.com/images/M/MV5BOTgxMDQwMDk0OF5BMl5BanBnXkFtZTgwNjU5OTg2NDE@._V1_SX214_AL_.jpg">
+			</a>
+
+			<a href="single-movie.html" class="movieCard col-md-4">
+				<h3>Jurassic Park </h3>
+				<img src="http://ia.media-imdb.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_SX214_AL_.jpg">
+			</a>
+
+			<a href="single-movie.html" class="movieCard col-md-4">
+				<h3>Mad Max: Fury Road </h3>
+				<img src="http://ia.media-imdb.com/images/M/MV5BMTUyMTE0ODcxNF5BMl5BanBnXkFtZTgwODE4NDQzNTE@._V1_SY317_CR2,0,214,317_AL_.jpg">
+			</a>
+		</div>
+
+		<div class="row">
+			<a href="single-movie.html" class="movieCard col-md-4">
+				<h3>Star Wars: Episode VII - The Force Awakens </h3>
+				<img src="http://ia.media-imdb.com/images/M/MV5BMTkwNzAwNDA4N15BMl5BanBnXkFtZTgwMTA2MDcwNzE@._V1_SX214_AL_.jpg">
+			</a>
+
+			<a href="single-movie.html" class="movieCard col-md-4">
+				<h3>The Shawshank Redemption</h3>
+				<img src="http://ia.media-imdb.com/images/M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_SX214_AL_.jpg">
+			</a>
+
+			<a href="single-movie.html" class="movieCard col-md-4">
+				<h3>Mrs. Doubtfire </h3>
+				<img src="http://ia.media-imdb.com/images/M/MV5BMjExMDUzODE1N15BMl5BanBnXkFtZTgwNTU5NTYxMTE@._V1_SX214_AL_.jpg">
+			</a>
+		</div>
+	</div>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

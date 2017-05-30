@@ -1,0 +1,10 @@
+buildfile: buildsciptdeveloper
+
+pull:
+	Pulling all the required files to make a functional ruby application
+
+host:
+	Using command prompt with Ruby to start a local server for the browser
+
+check:
+	Finding the application through a web browser

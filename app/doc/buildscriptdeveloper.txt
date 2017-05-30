@@ -1,0 +1,18 @@
+<project name ="NotIMDB" default="host">
+<property name="version" value="1.0" />
+
+<target name = "pull">
+	<git pull = "origin master">
+</target>
+
+<target name = "host">
+	<cd = "User">
+	<cd = "userName">
+	<cd = "repositoryFolderName">
+	<cd = "NotIMDB">
+	<rails = "server">
+</target>
+
+<target name ="check">
+	<"http://localhost:3000">
+</target>
